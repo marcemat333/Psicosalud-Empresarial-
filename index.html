@@ -5,22 +5,25 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>PsicoSalud Empresarial</title>
 
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
 <style>
+
 body {
   margin:0;
-  font-family:'Segoe UI', sans-serif;
+  font-family:'Poppins', sans-serif;
   background:#F7F6FB;
-  color:#444;
+  color:#333;
 }
 
 /* NAV */
 nav {
   background:white;
-  padding:15px 30px;
+  padding:15px 40px;
   display:flex;
   justify-content:space-between;
   align-items:center;
-  box-shadow:0 2px 10px rgba(0,0,0,0.05);
+  border-bottom:1px solid #eee;
 }
 
 .logo {
@@ -30,35 +33,42 @@ nav {
 }
 
 .logo img {
-  width:40px;
+  width:45px;
 }
 
 nav a {
   text-decoration:none;
-  margin:0 10px;
-  color:#5E5A8A;
-  font-weight:bold;
+  margin:0 12px;
+  color:#6D6A8E;
+  font-weight:600;
 }
 
 /* HERO */
 header {
-  background:linear-gradient(135deg,#8C88B6,#5E5A8A);
+  background: linear-gradient(135deg,#6D6A8E,#8C88B6);
   color:white;
-  padding:100px 20px;
+  padding:110px 20px;
   text-align:center;
 }
 
-header h1 {font-size:38px;}
+header h1 {
+  font-size:42px;
+}
 
+header p {
+  font-size:18px;
+}
+
+/* BOTÓN */
 .btn {
-  margin-top:20px;
+  margin-top:25px;
   background:#E8B7C4;
-  padding:12px 25px;
-  border-radius:30px;
+  padding:14px 28px;
+  border-radius:25px;
   display:inline-block;
   text-decoration:none;
   color:#5E5A8A;
-  font-weight:bold;
+  font-weight:600;
 }
 
 /* SECCIONES */
@@ -68,8 +78,12 @@ section {
   padding:70px 20px;
 }
 
-h2 {color:#5E5A8A;}
+h2 {
+  color:#6D6A8E;
+  font-size:28px;
+}
 
+/* TARJETAS */
 .grid {
   display:grid;
   grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
@@ -79,21 +93,24 @@ h2 {color:#5E5A8A;}
 .card {
   background:white;
   padding:25px;
-  border-radius:15px;
-  box-shadow:0 10px 20px rgba(0,0,0,0.05);
+  border-radius:10px;
+  border:1px solid #eee;
 }
 
+/* DESTACADO */
 .destacado {
   background:#EDEBFA;
   padding:30px;
-  border-radius:15px;
+  border-radius:10px;
 }
 
+/* FOOTER */
 footer {
   text-align:center;
-  padding:20px;
+  padding:25px;
   background:#eee;
 }
+
 </style>
 </head>
 
@@ -104,6 +121,7 @@ footer {
     <img src="logo.png">
     <b>PsicoSalud</b>
   </div>
+
   <div>
     <a href="index.html">Inicio</a>
     <a href="servicios.html">Servicios</a>
@@ -119,38 +137,38 @@ footer {
 </header>
 
 <section>
-<h2>¿Qué hacemos?</h2>
-<div class="card">
-Evaluamos e intervenimos el riesgo psicosocial en organizaciones conforme al SG-SST.
-</div>
+  <h2>¿Qué hacemos?</h2>
+  <div class="card">
+    Evaluamos e intervenimos el riesgo psicosocial en organizaciones conforme al SG-SST, garantizando cumplimiento normativo y bienestar laboral.
+  </div>
 </section>
 
 <section>
-<h2>Servicios</h2>
-<div class="grid">
-<div class="card">Evaluación psicosocial</div>
-<div class="card">Vigilancia epidemiológica</div>
-<div class="card">Intervención organizacional</div>
-<div class="card">Seguimiento</div>
-<div class="card">Convivencia laboral</div>
-<div class="card">Mindfulness</div>
-</div>
+  <h2>Servicios</h2>
+  <div class="grid">
+    <div class="card">Evaluación de riesgo psicosocial</div>
+    <div class="card">Programas de vigilancia epidemiológica</div>
+    <div class="card">Intervención organizacional</div>
+    <div class="card">Seguimiento psicosocial</div>
+    <div class="card">Capacitación en convivencia laboral</div>
+    <div class="card">Mindfulness empresarial</div>
+  </div>
 </section>
 
 <section>
-<h2>Importancia</h2>
-<div class="destacado">
-El riesgo psicosocial es de obligatorio control dentro del SG-SST y su incumplimiento puede generar sanciones.
-</div>
+  <h2>Enfoque diferencial</h2>
+  <div class="destacado">
+    Integramos mindfulness como herramienta de regulación emocional, fortaleciendo factores protectores en el entorno laboral.
+  </div>
 </section>
 
 <section id="contacto">
-<h2>Contacto</h2>
-<p>📧 psicosaludempresarial@gmail.com</p>
+  <h2>Contacto</h2>
+  <p>📧 psicosaludempresarial@gmail.com</p>
 </section>
 
 <footer>
-PsicoSalud Empresarial © 2026
+  PsicoSalud Empresarial © 2026
 </footer>
 
 </body>
