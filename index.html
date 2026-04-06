@@ -7,196 +7,207 @@
 
 <style>
 body {
-  margin: 0;
+  margin:0;
   font-family: 'Segoe UI', sans-serif;
-  background: #F7F6FB;
-  color: #444;
+  background:#F7F6FB;
+  color:#444;
+}
+
+/* NAV */
+nav {
+  background:white;
+  padding:15px 30px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  position:sticky;
+  top:0;
+  z-index:1000;
+  box-shadow:0 2px 10px rgba(0,0,0,0.05);
+}
+
+nav a {
+  margin:0 10px;
+  text-decoration:none;
+  color:#5E5A8A;
+  font-weight:bold;
 }
 
 /* HERO */
 header {
-  background: linear-gradient(135deg, #8C88B6, #5E5A8A);
-  color: white;
-  padding: 100px 20px;
-  text-align: center;
-  animation: fadeIn 1.5s ease;
+  background:linear-gradient(rgba(94,90,138,0.8), rgba(94,90,138,0.8)),
+  url("https://images.pexels.com/photos/3184398/pexels-photo-3184398.jpeg");
+  background-size:cover;
+  color:white;
+  text-align:center;
+  padding:120px 20px;
 }
 
-header h1 {
-  font-size: 40px;
-  margin: 0;
-}
-
-header p {
-  font-size: 18px;
-  margin-top: 10px;
-}
+header h1 {font-size:40px;}
 
 .btn {
-  margin-top: 20px;
-  display: inline-block;
-  background: #E8B7C4;
-  color: #5E5A8A;
-  padding: 12px 25px;
-  border-radius: 30px;
-  text-decoration: none;
-  font-weight: bold;
-  transition: 0.3s;
-}
-
-.btn:hover {
-  transform: scale(1.05);
+  margin-top:20px;
+  background:#E8B7C4;
+  padding:12px 25px;
+  border-radius:30px;
+  display:inline-block;
+  text-decoration:none;
+  color:#5E5A8A;
+  font-weight:bold;
 }
 
 /* SECCIONES */
 section {
-  padding: 60px 20px;
-  max-width: 1100px;
-  margin: auto;
+  max-width:1100px;
+  margin:auto;
+  padding:70px 20px;
+  opacity:0;
+  transform:translateY(40px);
+  transition:0.8s;
 }
 
-h2 {
-  color: #5E5A8A;
-  margin-bottom: 20px;
+section.visible {
+  opacity:1;
+  transform:translateY(0);
 }
 
-/* TARJETAS */
+h2 {color:#5E5A8A;}
+
+/* CARDS */
 .grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
-  gap: 20px;
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+  gap:20px;
 }
 
 .card {
-  background: white;
-  padding: 25px;
-  border-radius: 15px;
-  box-shadow: 0 10px 20px rgba(0,0,0,0.05);
-  transition: 0.3s;
+  background:white;
+  padding:25px;
+  border-radius:15px;
+  box-shadow:0 10px 20px rgba(0,0,0,0.05);
+  transition:0.3s;
 }
 
 .card:hover {
-  transform: translateY(-5px);
+  transform:translateY(-5px);
 }
 
-/* IMAGEN SECCIÓN */
-.flex {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 30px;
-  align-items: center;
+/* CTA */
+.cta {
+  background:#5E5A8A;
+  color:white;
+  text-align:center;
+  padding:80px 20px;
 }
 
-.flex img {
-  width: 100%;
-  border-radius: 15px;
+/* FORM */
+form input, form textarea {
+  width:100%;
+  padding:12px;
+  margin-top:10px;
+  border-radius:8px;
+  border:1px solid #ccc;
 }
 
-/* BENEFICIOS */
-.beneficios {
-  background: #EDEBFA;
-  padding: 30px;
-  border-radius: 15px;
-}
-
-/* FOOTER */
-footer {
-  background: #5E5A8A;
-  color: white;
-  text-align: center;
-  padding: 20px;
-}
-
-/* ANIMACIÓN */
-@keyframes fadeIn {
-  from {opacity:0; transform: translateY(20px);}
-  to {opacity:1; transform: translateY(0);}
+form button {
+  margin-top:15px;
+  background:#5E5A8A;
+  color:white;
+  border:none;
+  padding:12px;
+  border-radius:8px;
 }
 
 /* WHATSAPP */
 .whatsapp {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  background: #25D366;
-  color: white;
-  padding: 15px;
-  border-radius: 50%;
-  font-size: 20px;
-  text-decoration: none;
+  position:fixed;
+  bottom:20px;
+  right:20px;
+  background:#25D366;
+  color:white;
+  padding:15px;
+  border-radius:50%;
+  text-decoration:none;
+}
+
+footer {
+  text-align:center;
+  padding:20px;
+  background:#eee;
 }
 </style>
 </head>
 
 <body>
 
-<header>
+<nav>
+  <b>PsicoSalud</b>
+  <div>
+    <a href="#inicio">Inicio</a>
+    <a href="servicios.html">Servicios</a>
+    <a href="mindfulness.html">Mindfulness</a>
+    <a href="#contacto">Contacto</a>
+  </div>
+</nav>
+
+<header id="inicio">
   <h1>PsicoSalud Empresarial</h1>
-  <p>Gestión del riesgo psicosocial con enfoque estratégico</p>
-  <a class="btn" href="mailto:psicosaludempresarial@gmail.com">Contáctanos</a>
+  <p>Gestión integral del riesgo psicosocial</p>
+  <a class="btn" href="#contacto">Agendar consulta</a>
 </header>
 
 <section>
-  <h2>¿Qué hacemos?</h2>
-  <div class="card">
-    Evaluamos e intervenimos el riesgo psicosocial en organizaciones, alineando las acciones con la normativa colombiana del SG-SST.
-  </div>
+<h2>¿Quiénes somos?</h2>
+<p>Especialistas en SG-SST enfocados en riesgo psicosocial en el sector público y privado.</p>
 </section>
 
 <section>
-  <h2>Servicios</h2>
-
-  <div class="grid">
-
-    <div class="card">🧠 Evaluación de riesgo psicosocial</div>
-    <div class="card">📊 Vigilancia epidemiológica</div>
-    <div class="card">🏢 Intervención organizacional</div>
-    <div class="card">🤝 Convivencia laboral</div>
-    <div class="card">🧘 Mindfulness empresarial</div>
-
-  </div>
+<h2>Servicios</h2>
+<div class="grid">
+<div class="card">Evaluación psicosocial</div>
+<div class="card">Vigilancia epidemiológica</div>
+<div class="card">Intervención organizacional</div>
+<div class="card">Seguimiento</div>
+<div class="card">Convivencia laboral</div>
+<div class="card">Mindfulness</div>
+</div>
 </section>
 
-<section>
-  <h2>Enfoque diferencial</h2>
-
-  <div class="flex">
-
-    <div>
-      <div class="card">
-        Incorporamos mindfulness como herramienta de regulación emocional, fortaleciendo habilidades de afrontamiento y factores protectores en el entorno laboral.
-      </div>
-    </div>
-
-    <!-- 👇 ESTA IMAGEN SÍ FUNCIONA -->
-    <img src="https://images.pexels.com/photos/3822622/pexels-photo-3822622.jpeg">
-
-  </div>
+<section class="cta">
+<h2>Solicita una asesoría</h2>
+<p>Te ayudamos a cumplir normativa y mejorar el bienestar laboral</p>
 </section>
 
-<section>
-  <h2>Beneficios</h2>
+<section id="contacto">
+<h2>Contacto</h2>
 
-  <div class="beneficios">
-    ✔ Mayor productividad<br>
-    ✔ Reducción del ausentismo<br>
-    ✔ Mejora del clima laboral<br>
-    ✔ Cumplimiento normativo SG-SST
-  </div>
-</section>
+<form action="mailto:psicosaludempresarial@gmail.com" method="post" enctype="text/plain">
+<input type="text" name="nombre" placeholder="Nombre" required>
+<input type="email" name="correo" placeholder="Correo" required>
+<textarea name="mensaje" placeholder="Mensaje"></textarea>
+<button type="submit">Enviar</button>
+</form>
 
-<section>
-  <h2>Contacto</h2>
-  <div class="card">
-    📧 psicosaludempresarial@gmail.com
-  </div>
 </section>
 
 <footer>
-  PsicoSalud Empresarial © 2026
+PsicoSalud Empresarial © 2026
 </footer>
 
-<a class="whatsapp" href="https://wa.me/573XXXXXXXXX" target="_blank">💬</a>
+<a class="whatsapp" href="https://wa.me/573XXXXXXXXX">💬</a>
+
+<script>
+const sections = document.querySelectorAll("section");
+
+window.addEventListener("scroll", () => {
+  sections.forEach(sec => {
+    const top = sec.getBoundingClientRect().top;
+    if(top < window.innerHeight - 100){
+      sec.classList.add("visible");
+    }
+  });
+});
+</script>
 
 </body>
 </html>
