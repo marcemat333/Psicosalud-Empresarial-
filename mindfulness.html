@@ -1,19 +1,121 @@
-<header style="
-background: linear-gradient(rgba(94,90,138,0.9), rgba(94,90,138,0.9)),
-url('https://images.pexels.com/photos/3822622/pexels-photo-3822622.jpeg');
-background-size: cover;
-background-position: center;
-text-align:center;
-padding:100px 20px;
-color:white;
-">
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mindfulness Empresarial</title>
 
-<h1 style="font-size:42px; font-weight:700; color:white;">
-Mindfulness Empresarial
-</h1>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 
-<p style="font-size:20px; color:white;">
-Regulación emocional y bienestar en el trabajo
-</p>
+<style>
 
+body {
+  margin:0;
+  font-family:'Poppins', sans-serif;
+  background:#F7F6FB;
+  color:#333;
+}
+
+/* NAV */
+nav {
+  background:white;
+  padding:15px 40px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  border-bottom:1px solid #eee;
+}
+
+.logo {
+  display:flex;
+  align-items:center;
+  gap:10px;
+}
+
+.logo img {
+  width:45px;
+}
+
+nav a {
+  text-decoration:none;
+  margin:0 12px;
+  color:#6D6A8E;
+  font-weight:600;
+}
+
+/* HEADER */
+header {
+  background: linear-gradient(rgba(109,106,142,0.85), rgba(109,106,142,0.85)),
+  url('https://images.pexels.com/photos/1051838/pexels-photo-1051838.jpeg');
+  background-size:cover;
+  background-position:center;
+  color:white;
+  text-align:center;
+  padding:100px 20px;
+}
+
+header h1 {
+  font-size:40px;
+}
+
+/* CONTENIDO */
+section {
+  max-width:900px;
+  margin:auto;
+  padding:70px 20px;
+}
+
+.box {
+  background:white;
+  padding:25px;
+  border-radius:10px;
+  border:1px solid #eee;
+}
+
+/* BOTÓN */
+.btn {
+  display:inline-block;
+  margin-top:30px;
+  background:#E8B7C4;
+  padding:12px 25px;
+  border-radius:25px;
+  text-decoration:none;
+  color:#5E5A8A;
+  font-weight:600;
+}
+
+</style>
+</head>
+
+<body>
+
+<nav>
+  <div class="logo">
+    <img src="logo.png">
+    <b>PsicoSalud</b>
+  </div>
+
+  <div>
+    <a href="index.html">Inicio</a>
+    <a href="servicios.html">Servicios</a>
+    <a href="mindfulness.html">Mindfulness</a>
+  </div>
+</nav>
+
+<header>
+  <h1>Mindfulness Empresarial</h1>
+  <p>Bienestar emocional y regulación del estrés en el entorno laboral</p>
 </header>
+
+<section>
+
+<div class="box">
+El mindfulness es una herramienta basada en evidencia que fortalece la regulación emocional, mejora la atención y reduce el impacto del estrés laboral en los equipos de trabajo.
+</div>
+
+<a class="btn" href="index.html">⬅ Volver al inicio</a>
+
+</section>
+
+</body>
+</html>
