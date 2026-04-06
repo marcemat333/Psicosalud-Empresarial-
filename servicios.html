@@ -2,25 +2,111 @@
 <html lang="es">
 <head>
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Servicios</title>
+
+<style>
+body {
+  margin:0;
+  font-family:'Segoe UI', sans-serif;
+  background:#F7F6FB;
+  color:#444;
+}
+
+header {
+  background:linear-gradient(135deg,#8C88B6,#5E5A8A);
+  color:white;
+  text-align:center;
+  padding:80px 20px;
+}
+
+section {
+  max-width:1000px;
+  margin:auto;
+  padding:60px 20px;
+}
+
+h1,h2 {
+  color:#5E5A8A;
+}
+
+.grid {
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+  gap:20px;
+}
+
+.card {
+  background:white;
+  padding:25px;
+  border-radius:15px;
+  box-shadow:0 10px 20px rgba(0,0,0,0.05);
+  transition:0.3s;
+}
+
+.card:hover {
+  transform:translateY(-5px);
+}
+
+.btn {
+  display:inline-block;
+  margin-top:30px;
+  background:#E8B7C4;
+  color:#5E5A8A;
+  padding:12px 20px;
+  border-radius:25px;
+  text-decoration:none;
+  font-weight:bold;
+}
+</style>
 </head>
 
 <body>
 
-<h1>Servicios PsicoSalud</h1>
+<header>
+  <h1>Servicios PsicoSalud</h1>
+  <p>Soluciones integrales en riesgo psicosocial</p>
+</header>
 
-<p>Evaluación, intervención y seguimiento del riesgo psicosocial en organizaciones.</p>
+<section>
 
-<ul>
-<li>Evaluación de riesgo psicosocial</li>
-<li>Programa de vigilancia epidemiológica</li>
-<li>Intervención organizacional</li>
-<li>Seguimiento psicosocial</li>
-<li>Capacitación en convivencia laboral</li>
-</ul>
+<div class="grid">
 
-<br>
-<a href="index.html">⬅ Volver al inicio</a>
+<div class="card">
+🧠 <b>Evaluación de riesgo psicosocial</b><br><br>
+Diagnóstico conforme a normativa vigente.
+</div>
+
+<div class="card">
+📊 <b>Programa de vigilancia epidemiológica</b><br><br>
+Diseño y seguimiento del PVE.
+</div>
+
+<div class="card">
+🏢 <b>Intervención organizacional</b><br><br>
+Planes de mejora según resultados.
+</div>
+
+<div class="card">
+📈 <b>Seguimiento psicosocial</b><br><br>
+Monitoreo continuo de condiciones.
+</div>
+
+<div class="card">
+🤝 <b>Convivencia laboral</b><br><br>
+Capacitación y fortalecimiento del clima laboral.
+</div>
+
+<div class="card">
+🧘 <b>Mindfulness empresarial</b><br><br>
+Gestión emocional y bienestar.
+</div>
+
+</div>
+
+<a class="btn" href="index.html">⬅ Volver al inicio</a>
+
+</section>
 
 </body>
 </html>
