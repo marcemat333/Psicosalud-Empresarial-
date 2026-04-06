@@ -8,7 +8,7 @@
 <style>
 body {
   margin: 0;
-  font-family: Arial;
+  font-family: Arial, sans-serif;
   background: #F7F6FB;
   color: #444;
 }
@@ -23,10 +23,31 @@ header {
 }
 
 header img {
-  width: 80px;
+  width: 90px;
   background: white;
   border-radius: 50%;
   padding: 5px;
+  margin-bottom: 10px;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 34px;
+}
+
+header p {
+  margin-top: 10px;
+}
+
+.btn {
+  display: inline-block;
+  margin-top: 20px;
+  background: #E8B7C4;
+  color: #5E5A8A;
+  padding: 12px 25px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: bold;
 }
 
 section {
@@ -44,10 +65,13 @@ h2 {
   padding: 25px;
   border-radius: 12px;
   margin-top: 15px;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.05);
 }
 
-ul li {
-  margin-bottom: 10px;
+.grid {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
 }
 
 footer {
@@ -56,73 +80,113 @@ footer {
   text-align: center;
   padding: 20px;
 }
+
+.whatsapp {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #25D366;
+  color: white;
+  padding: 15px;
+  border-radius: 50%;
+  font-size: 20px;
+  text-decoration: none;
+}
 </style>
 </head>
 
 <body>
 
 <header>
-  <img src="logo.png">
+
+  <!-- 👉 SI YA SUBISTE TU LOGO, CAMBIA logo.png -->
+  <img src="logo.png" alt="Logo">
+
   <h1>PsicoSalud Empresarial</h1>
   <p>Gestión del riesgo psicosocial con enfoque estratégico</p>
+
+  <a class="btn" href="mailto:psicosaludempresarial@gmail.com">Contáctanos</a>
+
 </header>
 
 <section>
-<h2>Presentación</h2>
-<div class="box">
-PsicoSalud Empresarial ofrece servicios especializados en la evaluación, intervención, prevención y monitoreo del riesgo psicosocial en ambientes laborales, con un enfoque humano, técnico y ajustado a la normatividad vigente en Colombia.
-</div>
+  <h2>¿Qué hacemos?</h2>
+  <div class="box">
+    Evaluamos e intervenimos el riesgo psicosocial en organizaciones, alineando las acciones con la normativa colombiana del SG-SST.
+  </div>
 </section>
 
 <section>
-<h2>Contexto normativo</h2>
-<div class="box">
-El riesgo psicosocial hace parte de las condiciones de trabajo que deben ser evaluadas e intervenidas en el marco del Sistema de Gestión de Seguridad y Salud en el Trabajo (SG-SST), de acuerdo con la normativa vigente en Colombia. Su incumplimiento puede generar sanciones y afectar la salud y productividad de los trabajadores.
-</div>
+  <h2>Servicios</h2>
+
+  <div class="grid">
+
+    <div class="box">
+      🧠 <b>Evaluación psicosocial</b><br><br>
+      Diagnóstico integral del riesgo psicosocial.
+    </div>
+
+    <div class="box">
+      📊 <b>Vigilancia epidemiológica</b><br><br>
+      Diseño y ajuste de programas.
+    </div>
+
+    <div class="box">
+      🏢 <b>Intervención organizacional</b><br><br>
+      Planes de mejora según resultados.
+    </div>
+
+    <div class="box">
+      🤝 <b>Convivencia laboral</b><br><br>
+      Capacitación y fortalecimiento organizacional.
+    </div>
+
+    <div class="box">
+      🧘 <b>Mindfulness</b><br><br>
+      Regulación emocional y bienestar laboral.
+    </div>
+
+  </div>
 </section>
 
 <section>
-<h2>Si tu empresa...</h2>
-<div class="box">
-<ul>
-<li>Presenta altos niveles de estrés laboral</li>
-<li>Tiene conflictos laborales frecuentes</li>
-<li>Evidencia ausentismo o rotación</li>
-<li>No ha evaluado el riesgo psicosocial</li>
-</ul>
-</div>
+  <h2>Enfoque diferencial</h2>
+
+  <div style="display:grid; grid-template-columns: 1fr 1fr; gap:20px; align-items:center;">
+
+    <div class="box">
+      Incorporamos mindfulness como herramienta de regulación emocional, fortaleciendo habilidades de afrontamiento y factores protectores en el entorno laboral.
+    </div>
+
+    <img src="https://images.unsplash.com/photo-1506126613408-eca07ce68773" style="width:100%; border-radius:10px;">
+
+  </div>
 </section>
 
 <section>
-<h2>Beneficios</h2>
-<div class="box">
-<ul>
-<li>Mejora del clima organizacional</li>
-<li>Mayor productividad y compromiso</li>
-<li>Disminución de ausentismo</li>
-<li>Cumplimiento de la normativa vigente en SST</li>
-</ul>
-</div>
+  <h2>Beneficios</h2>
+
+  <div class="box">
+    ✔ Mayor productividad<br>
+    ✔ Reducción del ausentismo<br>
+    ✔ Mejora del clima laboral<br>
+    ✔ Cumplimiento normativo en SG-SST
+  </div>
 </section>
 
 <section>
-<h2>Servicios</h2>
-<div class="box">
-<ul>
-<li>Evaluación y diagnóstico del riesgo psicosocial</li>
-<li>Aplicación de batería de riesgo psicosocial</li>
-<li>Diseño de programas de vigilancia epidemiológica</li>
-<li>Diseño de protocolos de intervención</li>
-<li>Planes de intervención según resultados</li>
-<li>Seguimiento de condiciones de salud</li>
-<li>Entrenamiento en mindfulness</li>
-</ul>
-</div>
+  <h2>Contacto</h2>
+  <div class="box">
+    📧 psicosaludempresarial@gmail.com
+  </div>
 </section>
 
 <footer>
-PsicoSalud Empresarial © 2026
+  PsicoSalud Empresarial © 2026
 </footer>
+
+<!-- 👉 CAMBIA ESTE NÚMERO -->
+<a class="whatsapp" href="https://wa.me/573XXXXXXXXX" target="_blank">💬</a>
 
 </body>
 </html>
