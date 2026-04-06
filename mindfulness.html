@@ -32,9 +32,7 @@ nav {
   gap:10px;
 }
 
-.logo img {
-  width:45px;
-}
+.logo img { width:45px; }
 
 nav a {
   text-decoration:none;
@@ -54,22 +52,33 @@ header {
   padding:100px 20px;
 }
 
-header h1 {
-  font-size:40px;
-}
+header h1 { font-size:40px; }
 
-/* CONTENIDO */
+/* SECCIONES */
 section {
-  max-width:900px;
+  max-width:1000px;
   margin:auto;
-  padding:70px 20px;
+  padding:60px 20px;
 }
 
+h2 {
+  color:#6D6A8E;
+}
+
+/* BLOQUES */
 .box {
   background:white;
   padding:25px;
   border-radius:10px;
   border:1px solid #eee;
+  margin-bottom:20px;
+}
+
+/* GRID */
+.grid {
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+  gap:20px;
 }
 
 /* BOTÓN */
@@ -104,13 +113,35 @@ section {
 
 <header>
   <h1>Mindfulness Empresarial</h1>
-  <p>Bienestar emocional y regulación del estrés en el entorno laboral</p>
+  <p>Herramientas prácticas para la regulación emocional y la gestión del estrés laboral</p>
 </header>
 
 <section>
 
+<h2>¿Qué es mindfulness en el entorno laboral?</h2>
 <div class="box">
-El mindfulness es una herramienta basada en evidencia que fortalece la regulación emocional, mejora la atención y reduce el impacto del estrés laboral en los equipos de trabajo.
+El mindfulness es una práctica basada en evidencia que permite desarrollar atención plena, mejorar la regulación emocional y disminuir la reactividad frente a situaciones de estrés laboral. Su implementación en organizaciones contribuye a fortalecer factores protectores y mejorar el clima organizacional.
+</div>
+
+<h2>¿Para qué sirve en las organizaciones?</h2>
+<div class="grid">
+  <div class="box">Reducción del estrés y agotamiento laboral</div>
+  <div class="box">Mejora de la concentración y toma de decisiones</div>
+  <div class="box">Fortalecimiento del bienestar emocional</div>
+  <div class="box">Prevención de riesgos psicosociales</div>
+</div>
+
+<h2>Servicios en mindfulness</h2>
+<div class="grid">
+  <div class="box">Talleres prácticos para trabajadores</div>
+  <div class="box">Programas estructurados de bienestar emocional</div>
+  <div class="box">Sesiones guiadas de mindfulness</div>
+  <div class="box">Intervenciones grupales e individuales</div>
+</div>
+
+<h2>Enfoque de PsicoSalud</h2>
+<div class="box">
+Nuestros programas integran mindfulness dentro de la gestión del riesgo psicosocial, alineando las intervenciones con el SG-SST y promoviendo resultados sostenibles en el bienestar laboral.
 </div>
 
 <a class="btn" href="index.html">⬅ Volver al inicio</a>
