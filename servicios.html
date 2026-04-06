@@ -3,120 +3,156 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Servicios</title>
+<title>Servicios - PsicoSalud</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 
 <style>
+
 body {
   margin:0;
-  font-family:'Segoe UI', sans-serif;
+  font-family:'Poppins', sans-serif;
   background:#F7F6FB;
-  color:#444;
+  color:#333;
 }
 
+/* NAV */
+nav {
+  background:white;
+  padding:15px 40px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  border-bottom:1px solid #eee;
+}
+
+.logo {
+  display:flex;
+  align-items:center;
+  gap:10px;
+}
+
+.logo img {
+  width:45px;
+}
+
+nav a {
+  text-decoration:none;
+  margin:0 12px;
+  color:#6D6A8E;
+  font-weight:600;
+}
+
+/* HEADER */
 header {
-  background:linear-gradient(135deg,#8C88B6,#5E5A8A);
+  background: linear-gradient(rgba(109,106,142,0.85), rgba(109,106,142,0.85)),
+  url('https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg');
+  background-size:cover;
+  background-position:center;
   color:white;
   text-align:center;
-  padding:80px 20px;
+  padding:100px 20px;
 }
 
+header h1 {
+  font-size:42px;
+}
+
+header p {
+  font-size:18px;
+}
+
+/* SECCIONES */
 section {
-  max-width:1000px;
+  max-width:1100px;
   margin:auto;
   padding:60px 20px;
 }
 
-h1,h2 {
-  color:#5E5A8A;
+h2 {
+  color:#6D6A8E;
 }
 
+/* GRID */
 .grid {
   display:grid;
   grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
   gap:20px;
 }
 
+/* TARJETAS */
 .card {
   background:white;
   padding:25px;
-  border-radius:15px;
-  box-shadow:0 10px 20px rgba(0,0,0,0.05);
-  transition:0.3s;
+  border-radius:10px;
+  border:1px solid #eee;
 }
 
-.card:hover {
-  transform:translateY(-5px);
-}
-
+/* BOTÓN */
 .btn {
   display:inline-block;
   margin-top:30px;
   background:#E8B7C4;
-  color:#5E5A8A;
-  padding:12px 20px;
+  padding:12px 25px;
   border-radius:25px;
   text-decoration:none;
-  font-weight:bold;
+  color:#5E5A8A;
+  font-weight:600;
 }
+
 </style>
 </head>
 
 <body>
 
-<header style="
-background: linear-gradient(rgba(94,90,138,0.9), rgba(94,90,138,0.9)),
-url('https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg');
-background-size: cover;
-background-position: center;
-text-align:center;
-padding:100px 20px;
-color:white;
-">
+<nav>
+  <div class="logo">
+    <img src="logo.png">
+    <b>PsicoSalud</b>
+  </div>
 
-<h1 style="font-size:42px; font-weight:700; color:white;">
-Servicios PsicoSalud
-</h1>
+  <div>
+    <a href="index.html">Inicio</a>
+    <a href="servicios.html">Servicios</a>
+    <a href="mindfulness.html">Mindfulness</a>
+    <a href="index.html#contacto">Contacto</a>
+  </div>
+</nav>
 
-<p style="font-size:20px; color:white;">
-Soluciones integrales en riesgo psicosocial
-</p>
-
+<header>
+  <h1>Servicios PsicoSalud</h1>
+  <p>Soluciones integrales en gestión del riesgo psicosocial</p>
 </header>
 
 <section>
 
+<h2>Evaluación y diagnóstico</h2>
+<div class="card">
+Aplicación de instrumentos validados para la identificación del riesgo psicosocial, análisis de resultados y formulación de recomendaciones conforme a la normativa vigente.
+</div>
+
+<h2>Intervención organizacional</h2>
 <div class="grid">
-
-<div class="card">
-🧠 <b>Evaluación de riesgo psicosocial</b><br><br>
-Diagnóstico conforme a normativa vigente.
+  <div class="card">Diseño e implementación de programas de intervención</div>
+  <div class="card">Fortalecimiento del clima organizacional</div>
+  <div class="card">Gestión de factores de riesgo psicosocial</div>
 </div>
 
+<h2>Vigilancia epidemiológica</h2>
 <div class="card">
-📊 <b>Programa de vigilancia epidemiológica</b><br><br>
-Diseño y seguimiento del PVE.
+Diseño y ejecución de sistemas de vigilancia epidemiológica del riesgo psicosocial, con seguimiento y medición de impacto.
 </div>
 
-<div class="card">
-🏢 <b>Intervención organizacional</b><br><br>
-Planes de mejora según resultados.
+<h2>Capacitación</h2>
+<div class="grid">
+  <div class="card">Convivencia laboral</div>
+  <div class="card">Prevención del acoso laboral</div>
+  <div class="card">Salud mental en el trabajo</div>
 </div>
 
+<h2>Mindfulness empresarial</h2>
 <div class="card">
-📈 <b>Seguimiento psicosocial</b><br><br>
-Monitoreo continuo de condiciones.
-</div>
-
-<div class="card">
-🤝 <b>Convivencia laboral</b><br><br>
-Capacitación y fortalecimiento del clima laboral.
-</div>
-
-<div class="card">
-🧘 <b>Mindfulness empresarial</b><br><br>
-Gestión emocional y bienestar.
-</div>
-
+Programas de regulación emocional y manejo del estrés, integrados a la gestión del riesgo psicosocial.
 </div>
 
 <a class="btn" href="index.html">⬅ Volver al inicio</a>
