@@ -3,9 +3,9 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Servicios</title>
+<title>Servicios - PsicoSalud</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
 
 <style>
 
@@ -13,92 +13,67 @@ body{
   margin:0;
   font-family:'Poppins', sans-serif;
   background:#F7F6FB;
-  color:#333;
-  font-size:21px;
-  line-height:1.7;
+  font-size:20px;
 }
 
 /* NAV */
 nav{
   background:white;
-  padding:20px 50px;
+  padding:12px 30px;
   display:flex;
   justify-content:space-between;
+  border-bottom:1px solid #eee;
 }
 
 nav a{
+  margin:0 10px;
   text-decoration:none;
-  margin:0 15px;
   color:#6D6A8E;
   font-weight:600;
-  font-size:18px;
 }
 
 /* HEADER */
 header{
-  background:linear-gradient(rgba(109,106,142,0.85), rgba(109,106,142,0.85)),
-  url('https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg');
-  background-size:cover;
+  background:linear-gradient(135deg,#6D6A8E,#E8B7C4);
   color:white;
+  padding:60px 20px;
   text-align:center;
-  padding:160px 20px;
-  margin-bottom:60px;
 }
 
-h1{
-  font-size:56px;
-}
-
-header p{
-  font-size:24px;
-}
-
-/* SECCIONES */
+/* CONTENIDO */
 section{
-  max-width:1100px;
+  max-width:1000px;
   margin:auto;
-  padding:100px 20px;
+  padding:30px 20px;
 }
 
-/* TITULOS */
 h2{
-  font-size:34px;
-  margin-bottom:35px;
   color:#6D6A8E;
 }
 
-/* GRID */
-.grid{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-  gap:35px;
+/* BLOQUES */
+.bloque{
+  display:flex;
+  align-items:center;
+  gap:30px;
+  margin-bottom:25px;
 }
 
-/* TARJETAS */
-.card{
-  background:white;
-  padding:35px;
-  border-radius:16px;
-  border:1px solid #eee;
-  font-size:20px;
-  transition:0.3s;
+.bloque img{
+  width:260px;
+  border-radius:12px;
 }
 
-.card:hover{
-  transform:translateY(-6px);
+/* ANIMACIONES */
+.animar{
+  opacity:0;
+  transform:translateX(-40px);
+  transition:all 0.6s ease;
 }
 
-/* BOTON */
-.btn{
-  display:inline-block;
-  margin-top:50px;
-  background:#E8B7C4;
-  padding:15px 30px;
-  border-radius:30px;
-  font-weight:600;
-  text-decoration:none;
-  color:#5E5A8A;
-  font-size:18px;
+.animar.visible{
+  opacity:1;
+  transform:translateX(0);
 }
 
 </style>
@@ -115,40 +90,52 @@ h2{
   </div>
 </nav>
 
-<header>
+<header class="animar">
   <h1>Servicios</h1>
-  <p>Gestión integral del riesgo psicosocial</p>
+  <p>Soluciones integrales en riesgo psicosocial</p>
 </header>
 
 <section>
 
-<h2>Evaluación</h2>
-<div class="card">
-Aplicación de instrumentos y análisis conforme a normativa del SG-SST.
-</div>
+  <div class="bloque animar">
+    <div>
+      <h2>Evaluación de riesgo psicosocial</h2>
+      <p>Aplicación de baterías conforme a normativa colombiana y análisis técnico de resultados.</p>
+    </div>
+    <img src="https://images.unsplash.com/photo-1551836022-d5d88e9218df">
+  </div>
 
-<h2>Intervención</h2>
-<div class="grid">
-  <div class="card">Programas organizacionales</div>
-  <div class="card">Clima laboral</div>
-  <div class="card">Gestión del riesgo</div>
-</div>
+  <div class="bloque animar">
+    <img src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d">
+    <div>
+      <h2>Vigilancia epidemiológica</h2>
+      <p>Diseño e implementación de programas de vigilancia del riesgo psicosocial.</p>
+    </div>
+  </div>
 
-<h2>Vigilancia</h2>
-<div class="card">
-Seguimiento y medición del riesgo psicosocial.
-</div>
-
-<h2>Capacitación</h2>
-<div class="grid">
-  <div class="card">Convivencia laboral</div>
-  <div class="card">Prevención de acoso</div>
-  <div class="card">Salud mental</div>
-</div>
-
-<a class="btn" href="index.html">⬅ Volver</a>
+  <div class="bloque animar">
+    <div>
+      <h2>Intervención organizacional</h2>
+      <p>Estrategias orientadas a mejorar clima laboral, liderazgo y bienestar.</p>
+    </div>
+    <img src="https://images.unsplash.com/photo-1552664730-d307ca884978">
+  </div>
 
 </section>
+
+<script>
+const elementos = document.querySelectorAll('.animar');
+const mostrar = () => {
+  elementos.forEach(el => {
+    const top = el.getBoundingClientRect().top;
+    if(top < window.innerHeight - 40){
+      el.classList.add('visible');
+    }
+  });
+};
+window.addEventListener('scroll', mostrar);
+mostrar();
+</script>
 
 </body>
 </html>
