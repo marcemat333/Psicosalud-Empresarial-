@@ -15,114 +15,110 @@ body{
   background:#F7F6FB;
   color:#333;
   font-size:20px;
-  line-height:1.7;
+  line-height:1.6;
 }
 
 /* NAV */
 nav{
   background:white;
-  padding:18px 40px;
+  padding:15px 35px;
   display:flex;
   justify-content:space-between;
-  align-items:center;
   border-bottom:1px solid #eee;
 }
 
 nav a{
   text-decoration:none;
-  margin:0 12px;
+  margin:0 10px;
   color:#6D6A8E;
   font-weight:600;
-  font-size:17px;
 }
 
 /* HEADER */
 header{
   background:linear-gradient(135deg,#6D6A8E,#E8B7C4);
   color:white;
-  padding:120px 20px;
+  padding:90px 20px;
   text-align:center;
 }
 
 h1{
-  font-size:52px;
-  margin-bottom:10px;
+  font-size:48px;
+  margin-bottom:5px;
 }
 
 header p{
-  font-size:22px;
+  font-size:20px;
 }
 
-/* SECCIONES */
+/* SECCIONES (AQUÍ ESTABA EL PROBLEMA) */
 section{
   max-width:1000px;
   margin:auto;
-  padding:65px 20px;
+  padding:40px 20px;  /* 🔥 REDUCIDO */
 }
 
 /* TITULOS */
 h2{
-  font-size:30px;
-  margin-bottom:18px;
+  font-size:28px;
+  margin-bottom:10px; /* 🔥 MENOS ESPACIO */
   color:#6D6A8E;
 }
 
 /* TARJETAS */
 .card{
   background:white;
-  padding:28px;
-  border-radius:14px;
+  padding:22px;
+  border-radius:12px;
   border:1px solid #eee;
-  margin-top:10px;
+  margin-top:8px;
 }
 
 /* GRID */
 .grid{
   display:grid;
   grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-  gap:25px;
+  gap:18px; /* 🔥 MENOS GAP */
 }
 
 /* DESTACADO */
 .destacado{
   background:#EDEBFA;
-  padding:30px;
-  border-radius:14px;
-  margin-top:10px;
+  padding:25px;
+  border-radius:12px;
+  margin-top:8px;
 }
 
 /* FORM */
 form{
   background:white;
-  padding:30px;
-  border-radius:14px;
+  padding:25px;
+  border-radius:12px;
 }
 
 input, textarea{
   width:100%;
-  padding:14px;
-  margin:10px 0;
-  border-radius:10px;
+  padding:12px;
+  margin:8px 0;
+  border-radius:8px;
   border:1px solid #ccc;
-  font-size:18px;
 }
 
+/* BOTON */
 button{
   background:#E8B7C4;
-  padding:14px 26px;
+  padding:12px 22px;
   border:none;
-  border-radius:30px;
+  border-radius:25px;
   font-weight:600;
   cursor:pointer;
-  font-size:17px;
 }
 
 /* FOOTER */
 footer{
   text-align:center;
-  padding:20px;
+  padding:15px;
   background:#eee;
-  font-size:16px;
 }
 
 </style>
@@ -141,44 +137,44 @@ footer{
 
 <header>
   <h1>PsicoSalud Empresarial</h1>
-  <p>Gestión del riesgo psicosocial con enfoque técnico y normativo</p>
+  <p>Gestión del riesgo psicosocial con enfoque técnico</p>
 </header>
 
 <section>
   <h2>¿Qué es el riesgo psicosocial?</h2>
   <div class="card">
-    El riesgo psicosocial corresponde a las condiciones intralaborales, extralaborales y a las características individuales que, en interacción, pueden afectar la salud física y mental de los trabajadores. Su gestión es obligatoria dentro del SG-SST y requiere identificación, evaluación e intervención sistemática.
+    Son las condiciones del trabajo que pueden afectar la salud mental y física de los trabajadores. Su gestión es obligatoria dentro del SG-SST.
   </div>
 </section>
 
 <section>
-  <h2>Marco normativo en Colombia</h2>
+  <h2>Marco normativo</h2>
   <div class="card">
-    La gestión del riesgo psicosocial se fundamenta principalmente en la Resolución 2646 de 2008 y sus actualizaciones, así como en el Decreto 1072 de 2015. Estas disposiciones establecen la obligación de evaluar los factores de riesgo psicosocial, implementar medidas de intervención y realizar seguimiento continuo dentro del Sistema de Gestión de Seguridad y Salud en el Trabajo.
+    En Colombia se regula principalmente por la Resolución 2646 de 2008 y el Decreto 1072 de 2015, que exigen evaluación, intervención y seguimiento del riesgo psicosocial.
   </div>
 </section>
 
 <section>
   <h2>¿Qué hacemos?</h2>
   <div class="card">
-    Acompañamos a las entidades en la evaluación, intervención y seguimiento del riesgo psicosocial, asegurando cumplimiento normativo, trazabilidad y acciones efectivas dentro del SG-SST.
+    Evaluamos, intervenimos y hacemos seguimiento al riesgo psicosocial, garantizando cumplimiento y trazabilidad en el SG-SST.
   </div>
 </section>
 
 <section>
   <h2>Servicios</h2>
   <div class="grid">
-    <div class="card">Evaluación de riesgo psicosocial</div>
+    <div class="card">Evaluación psicosocial</div>
     <div class="card">Vigilancia epidemiológica</div>
     <div class="card">Intervención organizacional</div>
-    <div class="card">Capacitación en salud mental laboral</div>
+    <div class="card">Capacitación</div>
   </div>
 </section>
 
 <section>
   <h2>Enfoque diferencial</h2>
   <div class="destacado">
-    Integramos mindfulness como herramienta complementaria para fortalecer la regulación emocional y prevenir el deterioro del bienestar en el entorno laboral.
+    Integramos mindfulness como estrategia de regulación emocional dentro del SG-SST.
   </div>
 </section>
 
@@ -186,15 +182,10 @@ footer{
   <h2>Contacto</h2>
 
   <form action="https://formspree.io/f/mvzvlzqd" method="POST">
-
     <input type="text" name="nombre" placeholder="Nombre" required>
-
-    <input type="email" name="email" placeholder="Correo electrónico" required>
-
-    <textarea name="mensaje" placeholder="Cuéntanos qué necesitas" required></textarea>
-
-    <button type="submit">Enviar mensaje</button>
-
+    <input type="email" name="email" placeholder="Correo" required>
+    <textarea name="mensaje" placeholder="Mensaje" required></textarea>
+    <button type="submit">Enviar</button>
   </form>
 
 </section>
