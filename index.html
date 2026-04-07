@@ -29,17 +29,21 @@ nav{
 
 nav a{
   text-decoration:none;
-  margin:0 8px;
+  margin:0 12px;
   color:#6D6A8E;
   font-weight:600;
-  font-size:16px;
+  font-size:18px; /* 🔥 más grande */
 }
 
-/* HEADER */
+/* HEADER CON IMAGEN */
 header{
-  background:linear-gradient(135deg,#6D6A8E,#E8B7C4);
+  background:
+    linear-gradient(rgba(109,106,142,0.85), rgba(232,183,196,0.75)),
+    url('https://images.unsplash.com/photo-1521737604893-d14cc237f11d');
+  background-size:cover;
+  background-position:center;
   color:white;
-  padding:60px 20px;
+  padding:80px 20px;
   text-align:center;
 }
 
@@ -66,7 +70,7 @@ h2{
   color:#6D6A8E;
 }
 
-/* 🔥 TARJETAS (MEJOR CONTRASTE) */
+/* TARJETAS */
 .card{
   background:white;
   padding:18px;
@@ -179,10 +183,10 @@ footer{
 <section>
   <h2 class="animar">Servicios</h2>
   <div class="grid">
-    <div class="card animar">Evaluación psicosocial: identificación, medición y análisis de factores de riesgo.</div>
-    <div class="card animar">Vigilancia epidemiológica: seguimiento y control del riesgo psicosocial.</div>
-    <div class="card animar">Intervención organizacional: diseño e implementación de estrategias de mejora.</div>
-    <div class="card animar">Capacitación: fortalecimiento de competencias en salud mental y convivencia laboral.</div>
+    <div class="card animar"><strong>Evaluación psicosocial:</strong> identificación, medición y análisis de factores de riesgo.</div>
+    <div class="card animar"><strong>Vigilancia epidemiológica:</strong> seguimiento y control del riesgo psicosocial.</div>
+    <div class="card animar"><strong>Intervención organizacional:</strong> diseño e implementación de estrategias de mejora.</div>
+    <div class="card animar"><strong>Capacitación:</strong> fortalecimiento de competencias en salud mental y convivencia laboral.</div>
   </div>
 </section>
 
