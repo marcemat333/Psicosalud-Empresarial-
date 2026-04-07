@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>PsicoSalud Empresarial</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 
 <style>
 
@@ -14,12 +14,14 @@ body{
   font-family:'Poppins', sans-serif;
   background:#F7F6FB;
   color:#333;
+  font-size:19px;
+  line-height:1.6;
 }
 
 /* NAV */
 nav{
   background:white;
-  padding:15px 40px;
+  padding:18px 50px;
   display:flex;
   justify-content:space-between;
   align-items:center;
@@ -28,7 +30,7 @@ nav{
 
 nav a{
   text-decoration:none;
-  margin:0 12px;
+  margin:0 15px;
   color:#6D6A8E;
   font-weight:600;
 }
@@ -37,80 +39,100 @@ nav a{
 header{
   background:linear-gradient(135deg,#6D6A8E,#E8B7C4);
   color:white;
-  padding:120px 20px;
+  padding:140px 20px;
   text-align:center;
 }
 
-header h1{
-  font-size:46px;
+h1{
+  font-size:52px;
+  font-weight:700;
+}
+
+header p{
+  font-size:22px;
 }
 
 /* SECCIONES */
 section{
   max-width:1000px;
   margin:auto;
-  padding:80px 20px;
+  padding:100px 20px;
+}
+
+/* TITULOS */
+h2{
+  font-size:32px;
+  margin-bottom:35px;
+  color:#6D6A8E;
 }
 
 /* ANIMACIÓN */
 .animar{
   opacity:0;
-  transform:translateX(-60px);
+  transform:translateY(40px);
   transition:all 0.8s ease;
 }
 
 .animar.visible{
   opacity:1;
-  transform:translateX(0);
-}
-
-h2{
-  color:#6D6A8E;
+  transform:translateY(0);
 }
 
 /* TARJETAS */
 .grid{
   display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-  gap:20px;
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  gap:30px;
 }
 
 .card{
   background:white;
-  padding:25px;
-  border-radius:12px;
+  padding:30px;
+  border-radius:14px;
   border:1px solid #eee;
+  transition:0.3s;
 }
 
-/* FORM */
-form{
-  background:white;
-  padding:25px;
-  border-radius:12px;
+.card:hover{
+  transform:translateY(-6px);
 }
 
-input, textarea{
-  width:100%;
-  padding:12px;
-  margin:10px 0;
-  border-radius:8px;
-  border:1px solid #ccc;
+/* DESTACADO */
+.destacado{
+  background:#EDEBFA;
+  padding:40px;
+  border-radius:14px;
 }
 
 /* BOTON */
 button{
   background:#E8B7C4;
-  padding:12px 25px;
+  padding:14px 28px;
   border:none;
-  border-radius:25px;
+  border-radius:30px;
   font-weight:600;
   cursor:pointer;
+}
+
+/* FORM */
+form{
+  background:white;
+  padding:30px;
+  border-radius:14px;
+}
+
+input, textarea{
+  width:100%;
+  padding:14px;
+  margin:10px 0;
+  border-radius:10px;
+  border:1px solid #ddd;
 }
 
 /* FOOTER */
 footer{
   text-align:center;
-  padding:20px;
+  padding:25px;
   background:#eee;
 }
 
@@ -130,13 +152,13 @@ footer{
 
 <header>
   <h1>PsicoSalud Empresarial</h1>
-  <p>Gestión del riesgo psicosocial con enfoque estratégico</p>
+  <p>Gestión estratégica del riesgo psicosocial</p>
 </header>
 
 <section>
   <h2 class="animar">¿Qué hacemos?</h2>
   <div class="card animar">
-    Evaluamos e intervenimos el riesgo psicosocial en organizaciones conforme al SG-SST.
+    Evaluamos e intervenimos el riesgo psicosocial alineado al SG-SST, garantizando cumplimiento normativo y bienestar laboral.
   </div>
 </section>
 
@@ -151,18 +173,20 @@ footer{
 </section>
 
 <section>
+  <h2 class="animar">Enfoque diferencial</h2>
+  <div class="destacado animar">
+    Integramos mindfulness como herramienta estratégica en la gestión del riesgo psicosocial.
+  </div>
+</section>
+
+<section>
   <h2 class="animar">Contacto</h2>
 
   <form action="https://formspree.io/f/mvzvlzqd" method="POST" class="animar">
-
     <input type="text" name="nombre" placeholder="Nombre" required>
-
     <input type="email" name="email" placeholder="Correo" required>
-
     <textarea name="mensaje" placeholder="Mensaje" required></textarea>
-
-    <button type="submit">Enviar mensaje</button>
-
+    <button type="submit">Enviar</button>
   </form>
 
 </section>
@@ -172,19 +196,10 @@ PsicoSalud Empresarial © 2026
 </footer>
 
 <script>
-const elementos = document.querySelectorAll('.animar');
-
-const mostrar = () => {
-  elementos.forEach(el => {
-    const top = el.getBoundingClientRect().top;
-    if(top < window.innerHeight - 50){
-      el.classList.add('visible');
-    }
-  });
-};
-
-window.addEventListener('scroll', mostrar);
-mostrar();
+const els=document.querySelectorAll('.animar');
+const show=()=>{els.forEach(e=>{if(e.getBoundingClientRect().top<window.innerHeight-50){e.classList.add('visible')}})};
+window.addEventListener('scroll',show);
+show();
 </script>
 
 </body>
