@@ -3,96 +3,102 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Servicios - PsicoSalud</title>
+<title>Servicios</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
 
 <style>
 
-body {
+body{
   margin:0;
   font-family:'Poppins', sans-serif;
   background:#F7F6FB;
   color:#333;
+  font-size:21px;
+  line-height:1.7;
 }
 
 /* NAV */
-nav {
+nav{
   background:white;
-  padding:15px 40px;
+  padding:20px 50px;
   display:flex;
   justify-content:space-between;
-  align-items:center;
 }
 
-nav a {
+nav a{
   text-decoration:none;
-  margin:0 12px;
+  margin:0 15px;
   color:#6D6A8E;
   font-weight:600;
+  font-size:18px;
 }
 
 /* HEADER */
-header {
-  background: linear-gradient(rgba(109,106,142,0.85), rgba(109,106,142,0.85)),
+header{
+  background:linear-gradient(rgba(109,106,142,0.85), rgba(109,106,142,0.85)),
   url('https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg');
   background-size:cover;
-  background-position:center;
   color:white;
   text-align:center;
-  padding:120px 20px;
+  padding:160px 20px;
+  margin-bottom:60px;
+}
+
+h1{
+  font-size:56px;
+}
+
+header p{
+  font-size:24px;
 }
 
 /* SECCIONES */
-section {
+section{
   max-width:1100px;
   margin:auto;
-  padding:90px 20px;
-}
-
-/* ANIMACIÓN */
-.animar {
-  opacity:0;
-  transform:translateX(-60px);
-  transition: all 0.8s ease;
-}
-
-.animar.visible {
-  opacity:1;
-  transform:translateX(0);
+  padding:100px 20px;
 }
 
 /* TITULOS */
-h2 {
+h2{
+  font-size:34px;
+  margin-bottom:35px;
   color:#6D6A8E;
-  margin-bottom:30px;
 }
 
 /* GRID */
-.grid {
+.grid{
   display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-  gap:30px;
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  gap:35px;
 }
 
 /* TARJETAS */
-.card {
+.card{
   background:white;
-  padding:30px;
-  border-radius:12px;
+  padding:35px;
+  border-radius:16px;
   border:1px solid #eee;
+  font-size:20px;
+  transition:0.3s;
+}
+
+.card:hover{
+  transform:translateY(-6px);
 }
 
 /* BOTON */
-.btn {
+.btn{
   display:inline-block;
-  margin-top:40px;
+  margin-top:50px;
   background:#E8B7C4;
-  padding:12px 25px;
-  border-radius:25px;
+  padding:15px 30px;
+  border-radius:30px;
+  font-weight:600;
   text-decoration:none;
   color:#5E5A8A;
-  font-weight:600;
+  font-size:18px;
 }
 
 </style>
@@ -110,55 +116,39 @@ h2 {
 </nav>
 
 <header>
-  <h1 class="animar">Servicios PsicoSalud</h1>
-  <p class="animar">Soluciones integrales en gestión del riesgo psicosocial</p>
+  <h1>Servicios</h1>
+  <p>Gestión integral del riesgo psicosocial</p>
 </header>
 
 <section>
 
-<h2 class="animar">Evaluación y diagnóstico</h2>
-<div class="card animar">
-Aplicación de instrumentos validados para la identificación del riesgo psicosocial.
+<h2>Evaluación</h2>
+<div class="card">
+Aplicación de instrumentos y análisis conforme a normativa del SG-SST.
 </div>
 
-<h2 class="animar">Intervención organizacional</h2>
+<h2>Intervención</h2>
 <div class="grid">
-  <div class="card animar">Programas de intervención</div>
-  <div class="card animar">Clima organizacional</div>
-  <div class="card animar">Gestión de riesgos</div>
+  <div class="card">Programas organizacionales</div>
+  <div class="card">Clima laboral</div>
+  <div class="card">Gestión del riesgo</div>
 </div>
 
-<h2 class="animar">Vigilancia epidemiológica</h2>
-<div class="card animar">
+<h2>Vigilancia</h2>
+<div class="card">
 Seguimiento y medición del riesgo psicosocial.
 </div>
 
-<h2 class="animar">Capacitación</h2>
+<h2>Capacitación</h2>
 <div class="grid">
-  <div class="card animar">Convivencia laboral</div>
-  <div class="card animar">Prevención de acoso</div>
-  <div class="card animar">Salud mental</div>
+  <div class="card">Convivencia laboral</div>
+  <div class="card">Prevención de acoso</div>
+  <div class="card">Salud mental</div>
 </div>
 
-<a class="btn animar" href="index.html">⬅ Volver</a>
+<a class="btn" href="index.html">⬅ Volver</a>
 
 </section>
-
-<script>
-const elementos = document.querySelectorAll('.animar');
-
-const mostrar = () => {
-  elementos.forEach(el => {
-    const top = el.getBoundingClientRect().top;
-    if(top < window.innerHeight - 50){
-      el.classList.add('visible');
-    }
-  });
-};
-
-window.addEventListener('scroll', mostrar);
-mostrar();
-</script>
 
 </body>
 </html>
