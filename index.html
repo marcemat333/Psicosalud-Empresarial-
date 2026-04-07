@@ -9,7 +9,7 @@
 
 <style>
 
-body {
+body{
   margin:0;
   font-family:'Poppins', sans-serif;
   background:#F7F6FB;
@@ -18,7 +18,7 @@ body {
 }
 
 /* NAV */
-nav {
+nav{
   background:white;
   padding:15px 40px;
   display:flex;
@@ -27,17 +27,17 @@ nav {
   border-bottom:1px solid #eee;
 }
 
-.logo {
+.logo{
   display:flex;
   align-items:center;
   gap:10px;
 }
 
-.logo img {
+.logo img{
   width:45px;
 }
 
-nav a {
+nav a{
   text-decoration:none;
   margin:0 12px;
   color:#6D6A8E;
@@ -45,63 +45,78 @@ nav a {
 }
 
 /* HEADER */
-header {
-  background: linear-gradient(135deg,#6D6A8E,#8C88B6);
+header{
+  background:linear-gradient(135deg,#6D6A8E,#E8B7C4);
   color:white;
   padding:120px 20px;
   text-align:center;
 }
 
-header h1 {
+header h1{
   font-size:44px;
+  margin-bottom:10px;
 }
 
-header p {
+header p{
   font-size:20px;
 }
 
 /* SECCIONES */
-section {
+section{
   max-width:1000px;
   margin:auto;
   padding:80px 20px;
 }
 
-h2 {
+h2{
   color:#6D6A8E;
+  margin-bottom:20px;
 }
 
 /* TARJETAS */
-.grid {
+.grid{
   display:grid;
   grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
   gap:20px;
 }
 
-.card {
+.card{
   background:white;
   padding:25px;
-  border-radius:10px;
+  border-radius:12px;
   border:1px solid #eee;
+  transition:0.3s;
+}
+
+.card:hover{
+  transform:translateY(-5px);
 }
 
 /* DESTACADO */
-.destacado {
+.destacado{
   background:#EDEBFA;
   padding:30px;
-  border-radius:10px;
+  border-radius:12px;
 }
 
 /* FORM */
-input, textarea {
+form{
+  background:white;
+  padding:25px;
+  border-radius:12px;
+  border:1px solid #eee;
+}
+
+input, textarea{
   width:100%;
   padding:12px;
   margin:10px 0;
   border:1px solid #ccc;
   border-radius:8px;
+  font-family:'Poppins';
 }
 
-button {
+button{
   background:#E8B7C4;
   padding:12px 25px;
   border:none;
@@ -110,8 +125,12 @@ button {
   cursor:pointer;
 }
 
+button:hover{
+  opacity:0.9;
+}
+
 /* FOOTER */
-footer {
+footer{
   text-align:center;
   padding:20px;
   background:#eee;
@@ -131,7 +150,7 @@ footer {
   <div>
     <a href="index.html">Inicio</a>
     <a href="servicios.html">Servicios</a>
-    <a href="mindfulness.html">Mindfulness</a>
+    <a href="atención plena.html">Mindfulness</a>
   </div>
 </nav>
 
@@ -143,14 +162,14 @@ footer {
 <section>
   <h2>¿Qué hacemos?</h2>
   <div class="card">
-    Evaluamos e intervenimos el riesgo psicosocial en organizaciones conforme al SG-SST.
+    Evaluamos e intervenimos el riesgo psicosocial en organizaciones, alineando las acciones con la normativa colombiana del SG-SST.
   </div>
 </section>
 
 <section>
   <h2>Servicios</h2>
   <div class="grid">
-    <div class="card">Evaluación psicosocial</div>
+    <div class="card">Evaluación de riesgo psicosocial</div>
     <div class="card">Vigilancia epidemiológica</div>
     <div class="card">Intervención organizacional</div>
     <div class="card">Capacitación laboral</div>
@@ -160,22 +179,23 @@ footer {
 <section>
   <h2>Enfoque diferencial</h2>
   <div class="destacado">
-    Integramos mindfulness para fortalecer la regulación emocional y prevenir el riesgo psicosocial.
+    Incorporamos mindfulness como herramienta de regulación emocional, fortaleciendo habilidades de afrontamiento y factores protectores en el entorno laboral.
   </div>
 </section>
 
 <section>
   <h2>Contacto</h2>
 
+  <!-- FORMULARIO REAL FUNCIONANDO -->
   <form action="https://formspree.io/f/mvvz1zqd" method="POST">
 
     <input type="text" name="nombre" placeholder="Nombre" required>
 
-    <input type="email" name="email" placeholder="Correo" required>
+    <input type="email" name="email" placeholder="Correo electrónico" required>
 
     <textarea name="mensaje" placeholder="Cuéntanos qué necesitas" required></textarea>
 
-    <button type="submit">Enviar</button>
+    <button type="submit">Enviar mensaje</button>
 
   </form>
 
