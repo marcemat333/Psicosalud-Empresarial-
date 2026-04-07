@@ -3,90 +3,84 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Mindfulness Empresarial</title>
+<title>Mindfulness</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
 
 <style>
 
-body {
+body{
   margin:0;
   font-family:'Poppins', sans-serif;
   background:#F7F6FB;
   color:#333;
+  font-size:21px;
+  line-height:1.7;
 }
 
-/* NAV */
-nav {
+nav{
   background:white;
-  padding:15px 40px;
+  padding:20px 50px;
   display:flex;
   justify-content:space-between;
-  align-items:center;
-  border-bottom:1px solid #eee;
 }
 
-nav a {
+nav a{
   text-decoration:none;
-  margin:0 12px;
+  margin:0 15px;
   color:#6D6A8E;
-  font-weight:600;
+  font-size:18px;
 }
 
 /* HEADER */
-header {
-  background: linear-gradient(rgba(109,106,142,0.85), rgba(109,106,142,0.85)),
+header{
+  background:linear-gradient(rgba(109,106,142,0.85), rgba(109,106,142,0.85)),
   url('https://images.pexels.com/photos/1051838/pexels-photo-1051838.jpeg');
   background-size:cover;
-  background-position:center;
   color:white;
   text-align:center;
-  padding:120px 20px;
+  padding:160px 20px;
+  margin-bottom:60px;
+}
+
+h1{
+  font-size:56px;
 }
 
 /* SECCIONES */
-section {
+section{
   max-width:1000px;
   margin:auto;
-  padding:90px 20px;
+  padding:100px 20px;
 }
 
-/* ANIMACIÓN */
-.animar {
-  opacity:0;
-  transform:translateX(-60px);
-  transition: all 0.8s ease;
-}
-
-.animar.visible {
-  opacity:1;
-  transform:translateX(0);
-}
-
-h2 {
-  color:#6D6A8E;
+/* TITULOS */
+h2{
+  font-size:34px;
   margin-bottom:30px;
+  color:#6D6A8E;
 }
 
 /* BLOQUES */
-.box {
+.box{
   background:white;
-  padding:25px;
-  border-radius:12px;
+  padding:35px;
+  border-radius:16px;
   border:1px solid #eee;
-  margin-bottom:20px;
+  margin-bottom:25px;
+  font-size:20px;
 }
 
-/* BOTÓN */
-.btn {
+/* BOTON */
+.btn{
   display:inline-block;
-  margin-top:40px;
+  margin-top:50px;
   background:#E8B7C4;
-  padding:12px 25px;
-  border-radius:25px;
+  padding:15px 30px;
+  border-radius:30px;
   text-decoration:none;
-  color:#5E5A8A;
   font-weight:600;
+  font-size:18px;
 }
 
 </style>
@@ -104,51 +98,29 @@ h2 {
 </nav>
 
 <header>
-  <h1 class="animar">Mindfulness Empresarial</h1>
-  <p class="animar">Regulación emocional y bienestar en el entorno laboral</p>
+  <h1>Mindfulness</h1>
 </header>
 
 <section>
 
-<h2 class="animar">¿Qué es el mindfulness?</h2>
-<div class="box animar">
-El mindfulness es una práctica basada en evidencia que fortalece la atención plena, mejora la regulación emocional y reduce la reactividad frente a situaciones de estrés laboral.
+<h2>¿Qué es?</h2>
+<div class="box">
+Práctica basada en evidencia para mejorar la regulación emocional y reducir el estrés laboral.
 </div>
 
-<h2 class="animar">¿Para qué sirve en las organizaciones?</h2>
-<div class="box animar">
-Permite reducir el estrés, mejorar la concentración, fortalecer el bienestar emocional y actuar como estrategia preventiva frente al riesgo psicosocial.
+<h2>Beneficios</h2>
+<div class="box">
+Reduce el estrés, mejora la concentración y fortalece el bienestar emocional.
 </div>
 
-<h2 class="animar">¿Cómo lo implementamos?</h2>
-<div class="box animar">
-A través de talleres prácticos, sesiones guiadas y programas estructurados que se integran a la gestión del riesgo psicosocial dentro del SG-SST.
+<h2>Aplicación</h2>
+<div class="box">
+Se integra al SG-SST como estrategia preventiva del riesgo psicosocial.
 </div>
 
-<h2 class="animar">Enfoque PsicoSalud</h2>
-<div class="box animar">
-Integramos mindfulness como herramienta complementaria dentro de las intervenciones organizacionales, asegurando coherencia con la normativa y resultados sostenibles.
-</div>
-
-<a class="btn animar" href="index.html">⬅ Volver al inicio</a>
+<a class="btn" href="index.html">⬅ Volver</a>
 
 </section>
-
-<script>
-const elementos = document.querySelectorAll('.animar');
-
-const mostrar = () => {
-  elementos.forEach(el => {
-    const top = el.getBoundingClientRect().top;
-    if(top < window.innerHeight - 50){
-      el.classList.add('visible');
-    }
-  });
-};
-
-window.addEventListener('scroll', mostrar);
-mostrar();
-</script>
 
 </body>
 </html>
