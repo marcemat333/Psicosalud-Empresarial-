@@ -39,7 +39,7 @@ nav a{
 header{
   background:linear-gradient(135deg,#6D6A8E,#E8B7C4);
   color:white;
-  padding:60px 20px; /* 🔥 REDUCIDO FUERTE */
+  padding:60px 20px;
   text-align:center;
 }
 
@@ -56,7 +56,7 @@ header p{
 section{
   max-width:950px;
   margin:auto;
-  padding:25px 20px; /* 🔥 AQUÍ ESTABA EL PROBLEMA */
+  padding:25px 20px;
 }
 
 /* TITULOS */
@@ -123,6 +123,18 @@ footer{
   font-size:14px;
 }
 
+/* 🔥 ANIMACIONES */
+.animar{
+  opacity:0;
+  transform:translateY(20px);
+  transition:all 0.6s ease;
+}
+
+.animar.visible{
+  opacity:1;
+  transform:translateY(0);
+}
+
 </style>
 </head>
 
@@ -137,53 +149,53 @@ footer{
   </div>
 </nav>
 
-<header>
+<header class="animar">
   <h1>PsicoSalud Empresarial</h1>
   <p>Gestión del riesgo psicosocial con enfoque estratégico</p>
 </header>
 
 <section>
-  <h2>¿Qué es el riesgo psicosocial?</h2>
-  <div class="card">
+  <h2 class="animar">¿Qué es el riesgo psicosocial?</h2>
+  <div class="card animar">
     El riesgo psicosocial corresponde a las condiciones del trabajo que pueden afectar la salud y el bienestar de los trabajadores. Su gestión es obligatoria dentro del SG-SST.
   </div>
 </section>
 
 <section>
-  <h2>Marco normativo en Colombia</h2>
-  <div class="card">
+  <h2 class="animar">Marco normativo en Colombia</h2>
+  <div class="card animar">
     Se fundamenta en la Resolución 2646 de 2008 y el Decreto 1072 de 2015, que establecen la evaluación, intervención y seguimiento del riesgo psicosocial.
   </div>
 </section>
 
 <section>
-  <h2>¿Qué hacemos?</h2>
-  <div class="card">
+  <h2 class="animar">¿Qué hacemos?</h2>
+  <div class="card animar">
     Evaluamos e intervenimos el riesgo psicosocial en organizaciones conforme al SG-SST, garantizando bienestar laboral y cumplimiento.
   </div>
 </section>
 
 <section>
-  <h2>Servicios</h2>
+  <h2 class="animar">Servicios</h2>
   <div class="grid">
-    <div class="card">Evaluación psicosocial</div>
-    <div class="card">Vigilancia epidemiológica</div>
-    <div class="card">Intervención organizacional</div>
-    <div class="card">Capacitación</div>
+    <div class="card animar">Evaluación psicosocial</div>
+    <div class="card animar">Vigilancia epidemiológica</div>
+    <div class="card animar">Intervención organizacional</div>
+    <div class="card animar">Capacitación</div>
   </div>
 </section>
 
 <section>
-  <h2>Enfoque diferencial</h2>
-  <div class="destacado">
+  <h2 class="animar">Enfoque diferencial</h2>
+  <div class="destacado animar">
     Integramos mindfulness como herramienta para fortalecer la regulación emocional y el bienestar laboral.
   </div>
 </section>
 
 <section>
-  <h2>Contacto</h2>
+  <h2 class="animar">Contacto</h2>
 
-  <form action="https://formspree.io/f/mvzvlzqd" method="POST">
+  <form action="https://formspree.io/f/mvzvlzqd" method="POST" class="animar">
     <input type="text" name="nombre" placeholder="Nombre" required>
     <input type="email" name="email" placeholder="Correo" required>
     <textarea name="mensaje" placeholder="Cuéntanos qué necesitas" required></textarea>
@@ -192,9 +204,25 @@ footer{
 
 </section>
 
-<footer>
+<footer class="animar">
 PsicoSalud Empresarial © 2026
 </footer>
+
+<script>
+const elementos = document.querySelectorAll('.animar');
+
+const mostrar = () => {
+  elementos.forEach(el => {
+    const top = el.getBoundingClientRect().top;
+    if(top < window.innerHeight - 40){
+      el.classList.add('visible');
+    }
+  });
+};
+
+window.addEventListener('scroll', mostrar);
+mostrar();
+</script>
 
 </body>
 </html>
