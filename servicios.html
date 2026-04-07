@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Servicios - PsicoSalud</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
 
 <style>
 
@@ -23,17 +23,6 @@ nav {
   display:flex;
   justify-content:space-between;
   align-items:center;
-  border-bottom:1px solid #eee;
-}
-
-.logo {
-  display:flex;
-  align-items:center;
-  gap:10px;
-}
-
-.logo img {
-  width:45px;
 }
 
 nav a {
@@ -51,47 +40,53 @@ header {
   background-position:center;
   color:white;
   text-align:center;
-  padding:100px 20px;
-}
-
-header h1 {
-  font-size:42px;
-}
-
-header p {
-  font-size:18px;
+  padding:120px 20px;
 }
 
 /* SECCIONES */
 section {
   max-width:1100px;
   margin:auto;
-  padding:60px 20px;
+  padding:90px 20px;
 }
 
+/* ANIMACIÓN */
+.animar {
+  opacity:0;
+  transform:translateX(-60px);
+  transition: all 0.8s ease;
+}
+
+.animar.visible {
+  opacity:1;
+  transform:translateX(0);
+}
+
+/* TITULOS */
 h2 {
   color:#6D6A8E;
+  margin-bottom:30px;
 }
 
 /* GRID */
 .grid {
   display:grid;
   grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-  gap:20px;
+  gap:30px;
 }
 
 /* TARJETAS */
 .card {
   background:white;
-  padding:25px;
-  border-radius:10px;
+  padding:30px;
+  border-radius:12px;
   border:1px solid #eee;
 }
 
-/* BOTÓN */
+/* BOTON */
 .btn {
   display:inline-block;
-  margin-top:30px;
+  margin-top:40px;
   background:#E8B7C4;
   padding:12px 25px;
   border-radius:25px;
@@ -106,58 +101,64 @@ h2 {
 <body>
 
 <nav>
-  <div class="logo">
-    <img src="logo.png">
-    <b>PsicoSalud</b>
-  </div>
-
+  <div><b>PsicoSalud</b></div>
   <div>
     <a href="index.html">Inicio</a>
     <a href="servicios.html">Servicios</a>
     <a href="mindfulness.html">Mindfulness</a>
-    <a href="index.html#contacto">Contacto</a>
   </div>
 </nav>
 
 <header>
-  <h1>Servicios PsicoSalud</h1>
-  <p>Soluciones integrales en gestión del riesgo psicosocial</p>
+  <h1 class="animar">Servicios PsicoSalud</h1>
+  <p class="animar">Soluciones integrales en gestión del riesgo psicosocial</p>
 </header>
 
 <section>
 
-<h2>Evaluación y diagnóstico</h2>
-<div class="card">
-Aplicación de instrumentos validados para la identificación del riesgo psicosocial, análisis de resultados y formulación de recomendaciones conforme a la normativa vigente.
+<h2 class="animar">Evaluación y diagnóstico</h2>
+<div class="card animar">
+Aplicación de instrumentos validados para la identificación del riesgo psicosocial.
 </div>
 
-<h2>Intervención organizacional</h2>
+<h2 class="animar">Intervención organizacional</h2>
 <div class="grid">
-  <div class="card">Diseño e implementación de programas de intervención</div>
-  <div class="card">Fortalecimiento del clima organizacional</div>
-  <div class="card">Gestión de factores de riesgo psicosocial</div>
+  <div class="card animar">Programas de intervención</div>
+  <div class="card animar">Clima organizacional</div>
+  <div class="card animar">Gestión de riesgos</div>
 </div>
 
-<h2>Vigilancia epidemiológica</h2>
-<div class="card">
-Diseño y ejecución de sistemas de vigilancia epidemiológica del riesgo psicosocial, con seguimiento y medición de impacto.
+<h2 class="animar">Vigilancia epidemiológica</h2>
+<div class="card animar">
+Seguimiento y medición del riesgo psicosocial.
 </div>
 
-<h2>Capacitación</h2>
+<h2 class="animar">Capacitación</h2>
 <div class="grid">
-  <div class="card">Convivencia laboral</div>
-  <div class="card">Prevención del acoso laboral</div>
-  <div class="card">Salud mental en el trabajo</div>
+  <div class="card animar">Convivencia laboral</div>
+  <div class="card animar">Prevención de acoso</div>
+  <div class="card animar">Salud mental</div>
 </div>
 
-<h2>Mindfulness empresarial</h2>
-<div class="card">
-Programas de regulación emocional y manejo del estrés, integrados a la gestión del riesgo psicosocial.
-</div>
-
-<a class="btn" href="index.html">⬅ Volver al inicio</a>
+<a class="btn animar" href="index.html">⬅ Volver</a>
 
 </section>
+
+<script>
+const elementos = document.querySelectorAll('.animar');
+
+const mostrar = () => {
+  elementos.forEach(el => {
+    const top = el.getBoundingClientRect().top;
+    if(top < window.innerHeight - 50){
+      el.classList.add('visible');
+    }
+  });
+};
+
+window.addEventListener('scroll', mostrar);
+mostrar();
+</script>
 
 </body>
 </html>
