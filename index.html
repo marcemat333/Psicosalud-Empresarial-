@@ -14,7 +14,6 @@ body{
   font-family:'Poppins', sans-serif;
   background:#F7F6FB;
   color:#333;
-  font-size:18px;
 }
 
 /* NAV */
@@ -25,16 +24,6 @@ nav{
   justify-content:space-between;
   align-items:center;
   border-bottom:1px solid #eee;
-}
-
-.logo{
-  display:flex;
-  align-items:center;
-  gap:10px;
-}
-
-.logo img{
-  width:45px;
 }
 
 nav a{
@@ -53,11 +42,7 @@ header{
 }
 
 header h1{
-  font-size:44px;
-}
-
-header p{
-  font-size:20px;
+  font-size:46px;
 }
 
 /* SECCIONES */
@@ -65,6 +50,18 @@ section{
   max-width:1000px;
   margin:auto;
   padding:80px 20px;
+}
+
+/* ANIMACIÓN */
+.animar{
+  opacity:0;
+  transform:translateX(-60px);
+  transition:all 0.8s ease;
+}
+
+.animar.visible{
+  opacity:1;
+  transform:translateX(0);
 }
 
 h2{
@@ -85,30 +82,22 @@ h2{
   border:1px solid #eee;
 }
 
-/* DESTACADO */
-.destacado{
-  background:#EDEBFA;
-  padding:30px;
-  border-radius:12px;
-}
-
 /* FORM */
 form{
   background:white;
   padding:25px;
   border-radius:12px;
-  border:1px solid #eee;
 }
 
 input, textarea{
   width:100%;
   padding:12px;
   margin:10px 0;
-  border:1px solid #ccc;
   border-radius:8px;
-  font-family:'Poppins';
+  border:1px solid #ccc;
 }
 
+/* BOTON */
 button{
   background:#E8B7C4;
   padding:12px 25px;
@@ -131,15 +120,11 @@ footer{
 <body>
 
 <nav>
-  <div class="logo">
-    <img src="logo.png">
-    <b>PsicoSalud</b>
-  </div>
-
+  <div><b>PsicoSalud</b></div>
   <div>
     <a href="index.html">Inicio</a>
     <a href="servicios.html">Servicios</a>
-    <a href="atención plena.html">Mindfulness</a>
+    <a href="mindfulness.html">Mindfulness</a>
   </div>
 </nav>
 
@@ -149,40 +134,32 @@ footer{
 </header>
 
 <section>
-  <h2>¿Qué hacemos?</h2>
-  <div class="card">
-    Evaluamos e intervenimos el riesgo psicosocial en organizaciones, alineando las acciones con la normativa colombiana del SG-SST.
+  <h2 class="animar">¿Qué hacemos?</h2>
+  <div class="card animar">
+    Evaluamos e intervenimos el riesgo psicosocial en organizaciones conforme al SG-SST.
   </div>
 </section>
 
 <section>
-  <h2>Servicios</h2>
+  <h2 class="animar">Servicios</h2>
   <div class="grid">
-    <div class="card">Evaluación de riesgo psicosocial</div>
-    <div class="card">Vigilancia epidemiológica</div>
-    <div class="card">Intervención organizacional</div>
-    <div class="card">Capacitación en convivencia laboral</div>
+    <div class="card animar">Evaluación psicosocial</div>
+    <div class="card animar">Vigilancia epidemiológica</div>
+    <div class="card animar">Intervención organizacional</div>
+    <div class="card animar">Capacitación laboral</div>
   </div>
 </section>
 
 <section>
-  <h2>Enfoque diferencial</h2>
-  <div class="destacado">
-    Incorporamos mindfulness como herramienta de regulación emocional, fortaleciendo habilidades de afrontamiento y factores protectores en el entorno laboral.
-  </div>
-</section>
+  <h2 class="animar">Contacto</h2>
 
-<section>
-  <h2>Contacto</h2>
-
-  <!-- FORMULARIO YA BIEN CONFIGURADO -->
-  <form action="https://formspree.io/f/mvzvlzqd" method="POST">
+  <form action="https://formspree.io/f/mvzvlzqd" method="POST" class="animar">
 
     <input type="text" name="nombre" placeholder="Nombre" required>
 
-    <input type="email" name="email" placeholder="Correo electrónico" required>
+    <input type="email" name="email" placeholder="Correo" required>
 
-    <textarea name="mensaje" placeholder="Cuéntanos qué necesitas" required></textarea>
+    <textarea name="mensaje" placeholder="Mensaje" required></textarea>
 
     <button type="submit">Enviar mensaje</button>
 
@@ -193,6 +170,22 @@ footer{
 <footer>
 PsicoSalud Empresarial © 2026
 </footer>
+
+<script>
+const elementos = document.querySelectorAll('.animar');
+
+const mostrar = () => {
+  elementos.forEach(el => {
+    const top = el.getBoundingClientRect().top;
+    if(top < window.innerHeight - 50){
+      el.classList.add('visible');
+    }
+  });
+};
+
+window.addEventListener('scroll', mostrar);
+mostrar();
+</script>
 
 </body>
 </html>
