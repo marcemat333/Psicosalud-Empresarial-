@@ -3,9 +3,9 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Mindfulness - PsicoSalud</title>
+<title>Mindfulness Empresarial</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
 
 <style>
 
@@ -13,7 +13,9 @@ body{
   margin:0;
   font-family:'Poppins', sans-serif;
   background:#F7F6FB;
+  color:#333;
   font-size:20px;
+  line-height:1.6;
 }
 
 /* NAV */
@@ -26,8 +28,8 @@ nav{
 }
 
 nav a{
-  margin:0 10px;
   text-decoration:none;
+  margin:0 10px;
   color:#6D6A8E;
   font-weight:600;
 }
@@ -36,44 +38,64 @@ nav a{
 header{
   background:linear-gradient(135deg,#6D6A8E,#E8B7C4);
   color:white;
-  padding:60px 20px;
+  padding:70px 20px;
   text-align:center;
+}
+
+h1{
+  font-size:42px;
+  margin-bottom:5px;
+}
+
+header p{
+  font-size:20px;
 }
 
 /* CONTENIDO */
 section{
-  max-width:1000px;
+  max-width:900px;
   margin:auto;
   padding:30px 20px;
 }
 
+/* TITULOS */
 h2{
   color:#6D6A8E;
+  font-size:26px;
+  margin-bottom:8px;
 }
 
 /* BLOQUES */
 .bloque{
-  display:flex;
-  align-items:center;
-  gap:30px;
-  margin-bottom:25px;
+  background:white;
+  padding:20px;
+  border-radius:10px;
+  border:1px solid #eee;
+  margin-bottom:18px;
 }
 
-.bloque img{
-  width:260px;
-  border-radius:12px;
-}
-
-/* ANIMACIONES */
+/* ANIMACIÓN */
 .animar{
   opacity:0;
-  transform:translateX(-40px);
-  transition:all 0.6s ease;
+  transform:translateX(-30px);
+  transition:all 0.5s ease;
 }
 
 .animar.visible{
   opacity:1;
   transform:translateX(0);
+}
+
+/* BOTÓN */
+.btn{
+  display:inline-block;
+  margin-top:20px;
+  background:#E8B7C4;
+  padding:10px 20px;
+  border-radius:20px;
+  text-decoration:none;
+  font-weight:600;
+  color:#5E5A8A;
 }
 
 </style>
@@ -91,32 +113,47 @@ h2{
 </nav>
 
 <header class="animar">
-  <h1>Mindfulness</h1>
-  <p>Herramientas para el bienestar emocional en el entorno laboral</p>
+  <h1>Mindfulness Empresarial</h1>
+  <p>Herramienta para la regulación emocional en el entorno laboral</p>
 </header>
 
 <section>
 
   <div class="bloque animar">
-    <div>
-      <h2>¿Qué es mindfulness?</h2>
-      <p>Es una práctica basada en la atención plena que permite gestionar el estrés y mejorar la concentración.</p>
-    </div>
-    <img src="https://images.unsplash.com/photo-1506126613408-eca07ce68773">
+    <h2>¿Qué es el mindfulness?</h2>
+    <p>
+      El mindfulness es una práctica basada en la atención plena que permite desarrollar conciencia sobre el momento presente, mejorar la regulación emocional y reducir la reactividad frente a situaciones de estrés.
+    </p>
   </div>
 
   <div class="bloque animar">
-    <img src="https://images.unsplash.com/photo-1493836512294-502baa1986e2">
-    <div>
-      <h2>Aplicación en el trabajo</h2>
-      <p>Fortalece habilidades de afrontamiento, mejora el clima laboral y reduce el desgaste emocional.</p>
-    </div>
+    <h2>Aplicación en el entorno laboral</h2>
+    <p>
+      En el contexto organizacional, el mindfulness contribuye a disminuir el estrés laboral, mejorar la concentración y fortalecer habilidades de afrontamiento en los trabajadores.
+    </p>
   </div>
+
+  <div class="bloque animar">
+    <h2>Relación con el riesgo psicosocial</h2>
+    <p>
+      Se integra como herramienta complementaria en la intervención del riesgo psicosocial, especialmente en la gestión del estrés y el fortalecimiento del bienestar laboral.
+    </p>
+  </div>
+
+  <div class="bloque animar">
+    <h2>Enfoque PsicoSalud</h2>
+    <p>
+      Incorporamos mindfulness dentro de las estrategias de intervención organizacional, alineándolo con la gestión del riesgo psicosocial en el SG-SST.
+    </p>
+  </div>
+
+  <a class="btn animar" href="index.html">⬅ Volver al inicio</a>
 
 </section>
 
 <script>
 const elementos = document.querySelectorAll('.animar');
+
 const mostrar = () => {
   elementos.forEach(el => {
     const top = el.getBoundingClientRect().top;
@@ -125,6 +162,7 @@ const mostrar = () => {
     }
   });
 };
+
 window.addEventListener('scroll', mostrar);
 mostrar();
 </script>
