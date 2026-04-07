@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>PsicoSalud Empresarial</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
 
 <style>
 
@@ -14,6 +14,7 @@ body {
   font-family:'Poppins', sans-serif;
   background:#F7F6FB;
   color:#333;
+  font-size:18px;
 }
 
 /* NAV */
@@ -41,22 +42,24 @@ nav a {
   margin:0 12px;
   color:#6D6A8E;
   font-weight:600;
+  font-size:16px;
 }
 
-/* HERO */
+/* HEADER */
 header {
   background: linear-gradient(135deg,#6D6A8E,#8C88B6);
   color:white;
-  padding:110px 20px;
+  padding:120px 20px;
   text-align:center;
 }
 
 header h1 {
-  font-size:42px;
+  font-size:44px;
+  margin-bottom:10px;
 }
 
 header p {
-  font-size:18px;
+  font-size:20px;
 }
 
 /* BOTÓN */
@@ -73,14 +76,14 @@ header p {
 
 /* SECCIONES */
 section {
-  max-width:1100px;
+  max-width:1000px;
   margin:auto;
-  padding:70px 20px;
+  padding:80px 20px;
 }
 
 h2 {
+  font-size:30px;
   color:#6D6A8E;
-  font-size:28px;
 }
 
 /* TARJETAS */
@@ -104,10 +107,29 @@ h2 {
   border-radius:10px;
 }
 
+/* FORMULARIO */
+input, textarea {
+  width:100%;
+  padding:12px;
+  margin:10px 0;
+  border:1px solid #ccc;
+  border-radius:8px;
+  font-family:'Poppins';
+}
+
+button {
+  background:#E8B7C4;
+  padding:12px 25px;
+  border:none;
+  border-radius:25px;
+  font-weight:600;
+  cursor:pointer;
+}
+
 /* FOOTER */
 footer {
   text-align:center;
-  padding:25px;
+  padding:20px;
   background:#eee;
 }
 
@@ -126,65 +148,57 @@ footer {
     <a href="index.html">Inicio</a>
     <a href="servicios.html">Servicios</a>
     <a href="mindfulness.html">Mindfulness</a>
-    <a href="#contacto">Contacto</a>
   </div>
 </nav>
 
 <header>
   <h1>PsicoSalud Empresarial</h1>
   <p>Gestión del riesgo psicosocial con enfoque estratégico</p>
-  <a class="btn" href="#contacto">Agendar asesoría</a>
 </header>
 
 <section>
   <h2>¿Qué hacemos?</h2>
   <div class="card">
-    Evaluamos e intervenimos el riesgo psicosocial en organizaciones conforme al SG-SST, garantizando cumplimiento normativo y bienestar laboral.
+    Evaluamos e intervenimos el riesgo psicosocial en organizaciones conforme al SG-SST.
   </div>
 </section>
 
 <section>
   <h2>Servicios</h2>
   <div class="grid">
-    <div class="card">Evaluación de riesgo psicosocial</div>
-    <div class="card">Programas de vigilancia epidemiológica</div>
+    <div class="card">Evaluación psicosocial</div>
+    <div class="card">Vigilancia epidemiológica</div>
     <div class="card">Intervención organizacional</div>
-    <div class="card">Seguimiento psicosocial</div>
-    <div class="card">Capacitación en convivencia laboral</div>
-    <div class="card">Mindfulness empresarial</div>
+    <div class="card">Capacitación laboral</div>
   </div>
 </section>
 
 <section>
   <h2>Enfoque diferencial</h2>
   <div class="destacado">
-    Integramos mindfulness como herramienta de regulación emocional, fortaleciendo factores protectores en el entorno laboral.
+    Integramos mindfulness para fortalecer la regulación emocional y prevenir el riesgo psicosocial.
   </div>
 </section>
 
 <section id="contacto">
   <h2>Contacto</h2>
-  <p>📧 psicosaludempresarial@gmail.com</p>
-</section>
-<section id="contacto" style="padding:60px 20px; max-width:600px; margin:auto;">
-
-  <h2>Contacto</h2>
 
   <form action="https://formspree.io/f/abcde123" method="POST">
 
-    <input type="text" name="nombre" placeholder="Nombre" required style="width:100%; padding:10px; margin:10px 0;"><br>
+    <input type="text" name="nombre" placeholder="Nombre" required>
 
-    <input type="email" name="email" placeholder="Correo" required style="width:100%; padding:10px; margin:10px 0;"><br>
+    <input type="email" name="email" placeholder="Correo" required>
 
-    <textarea name="mensaje" placeholder="Cuéntanos qué necesitas" required style="width:100%; padding:10px; margin:10px 0;"></textarea><br>
+    <textarea name="mensaje" placeholder="Cuéntanos qué necesitas" required></textarea>
 
-    <button type="submit" style="padding:10px 20px;">Enviar</button>
+    <button type="submit">Enviar</button>
 
   </form>
 
 </section>
+
 <footer>
-  PsicoSalud Empresarial © 2026
+PsicoSalud Empresarial © 2026
 </footer>
 
 </body>
