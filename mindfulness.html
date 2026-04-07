@@ -3,9 +3,9 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Mindfulness Empresarial</title>
+<title>Mindfulness - PsicoSalud</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
 
 <style>
 
@@ -13,79 +13,67 @@ body{
   margin:0;
   font-family:'Poppins', sans-serif;
   background:#F7F6FB;
-  color:#333;
-  font-size:22px;
-  line-height:1.8;
+  font-size:20px;
 }
 
 /* NAV */
 nav{
   background:white;
-  padding:20px 50px;
+  padding:12px 30px;
   display:flex;
   justify-content:space-between;
   border-bottom:1px solid #eee;
 }
 
 nav a{
+  margin:0 10px;
   text-decoration:none;
-  margin:0 15px;
   color:#6D6A8E;
   font-weight:600;
-  font-size:18px;
 }
 
-/* HEADER (MISMA FOTO, MEJOR ESPACIADO) */
+/* HEADER */
 header{
-  background:linear-gradient(rgba(109,106,142,0.85), rgba(109,106,142,0.85)),
-  url('https://images.pexels.com/photos/1051838/pexels-photo-1051838.jpeg');
-  background-size:cover;
-  background-position:center;
+  background:linear-gradient(135deg,#6D6A8E,#E8B7C4);
   color:white;
+  padding:60px 20px;
   text-align:center;
-  padding:180px 20px 140px;
-  margin-bottom:70px;
 }
 
-h1{
-  font-size:58px;
-}
-
-/* SECCIONES */
+/* CONTENIDO */
 section{
   max-width:1000px;
   margin:auto;
-  padding:90px 20px;
+  padding:30px 20px;
 }
 
-/* TITULOS */
 h2{
-  font-size:36px;
-  margin-bottom:35px;
   color:#6D6A8E;
 }
 
 /* BLOQUES */
-.box{
-  background:white;
-  padding:40px;
-  border-radius:18px;
-  border:1px solid #eee;
-  margin-bottom:30px;
-  font-size:21px;
+.bloque{
+  display:flex;
+  align-items:center;
+  gap:30px;
+  margin-bottom:25px;
 }
 
-/* BOTON */
-.btn{
-  display:inline-block;
-  margin-top:60px;
-  background:#E8B7C4;
-  padding:16px 30px;
-  border-radius:30px;
-  text-decoration:none;
-  font-weight:600;
-  font-size:18px;
-  color:#5E5A8A;
+.bloque img{
+  width:260px;
+  border-radius:12px;
+}
+
+/* ANIMACIONES */
+.animar{
+  opacity:0;
+  transform:translateX(-40px);
+  transition:all 0.6s ease;
+}
+
+.animar.visible{
+  opacity:1;
+  transform:translateX(0);
 }
 
 </style>
@@ -102,35 +90,44 @@ h2{
   </div>
 </nav>
 
-<header>
-  <h1>Mindfulness Empresarial</h1>
+<header class="animar">
+  <h1>Mindfulness</h1>
+  <p>Herramientas para el bienestar emocional en el entorno laboral</p>
 </header>
 
 <section>
 
-<h2>¿Qué es el mindfulness en el entorno laboral?</h2>
-<div class="box">
-El mindfulness es una práctica basada en evidencia que permite desarrollar atención plena, mejorar la regulación emocional y disminuir la reactividad frente a situaciones de estrés laboral.
-</div>
+  <div class="bloque animar">
+    <div>
+      <h2>¿Qué es mindfulness?</h2>
+      <p>Es una práctica basada en la atención plena que permite gestionar el estrés y mejorar la concentración.</p>
+    </div>
+    <img src="https://images.unsplash.com/photo-1506126613408-eca07ce68773">
+  </div>
 
-<h2>¿Para qué sirve en las organizaciones?</h2>
-<div class="box">
-Permite reducir el estrés, mejorar la concentración, fortalecer el bienestar emocional y actuar como estrategia preventiva frente al riesgo psicosocial.
-</div>
-
-<h2>Servicios en mindfulness</h2>
-<div class="box">
-Talleres prácticos, sesiones guiadas y programas estructurados enfocados en el bienestar emocional de los trabajadores.
-</div>
-
-<h2>Enfoque PsicoSalud</h2>
-<div class="box">
-Integramos mindfulness dentro de la gestión del riesgo psicosocial, alineando las intervenciones con el SG-SST.
-</div>
-
-<a class="btn" href="index.html">⬅ Volver al inicio</a>
+  <div class="bloque animar">
+    <img src="https://images.unsplash.com/photo-1493836512294-502baa1986e2">
+    <div>
+      <h2>Aplicación en el trabajo</h2>
+      <p>Fortalece habilidades de afrontamiento, mejora el clima laboral y reduce el desgaste emocional.</p>
+    </div>
+  </div>
 
 </section>
+
+<script>
+const elementos = document.querySelectorAll('.animar');
+const mostrar = () => {
+  elementos.forEach(el => {
+    const top = el.getBoundingClientRect().top;
+    if(top < window.innerHeight - 40){
+      el.classList.add('visible');
+    }
+  });
+};
+window.addEventListener('scroll', mostrar);
+mostrar();
+</script>
 
 </body>
 </html>
